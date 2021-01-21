@@ -1,7 +1,7 @@
 import express from "express";
 import session, {Store} from "express-session";
 import {SESSION_OPTIONS} from "./config";
-import {register} from "./routes";
+import {home, login, register} from "./routes";
 import {internalServerError, notFound} from "./middleware/errors";
 
 export const createApp = (store: Store) => {
@@ -14,6 +14,10 @@ export const createApp = (store: Store) => {
         ...SESSION_OPTIONS,
         store
     }))
+
+    app.use(home);
+
+    app.use(login);
 
     app.use(register);
 
