@@ -4,6 +4,8 @@ import {SESSION_NAME} from './config';
 export const logIn = (req: Request, userId: string) => {
     // @ts-ignore
     req.session!.userId = userId;
+    // @ts-ignore
+    req.session!.createdAt = Date.now();
 }
 
 // @ts-ignore

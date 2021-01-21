@@ -8,21 +8,21 @@ import {auth, guest} from "../middleware";
 
 const router = Router();
 
-router.post('/logout', auth,catchAsync(async (req: Request, res: Response) => {
+router.post('/logout', auth, catchAsync(async (req: Request, res: Response) => {
     // @ts-ignore
     await logOut(req, res);
 
     res.json({message: 'OK'});
 }))
 
-router.post('/login', guest,catchAsync(async (req: Request, res: Response) => {
+router.post('/login', guest, catchAsync(async (req: Request, res: Response) => {
     await validate(loginSchema, req.body);
 
     const {email, password} = req.body;
 
     const user = await User.findOne({email});
 
-    if(!user || await !user.matchesPassword(password)){
+    if (!user || await !user.matchesPassword(password)) {
         throw new Unauthorized('Incorrect email or password');
     }
 
