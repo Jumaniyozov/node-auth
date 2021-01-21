@@ -1,0 +1,19 @@
+{
+  "name": "node-auth",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "yarn --cwd api run dev",
+    "postup": "yarn run dev",
+    "up": "docker-compose up -d",
+    "stop": "docker-compose stop",
+    "down": "docker-compose down"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "@types/bcryptjs": "^2.4.2",
+    "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {
+    "@types/hapi__joi": "^17.1.6"
+  }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MongoDB - auth@localhost">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.20">
+    <root id="1">
+      <ServerVersion>4.4.3</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="auth">
+      <Current>1</Current>
+    </schema>
+    <table id="3" parent="2" name="users"/>
+    <column id="4" parent="3" name="_id">
+      <DataType>ObjectId(0)|12s</DataType>
+    </column>
+    <column id="5" parent="3" name="__v">
+      <Position>1</Position>
+      <DataType>Integer|4s</DataType>
+    </column>
+    <column id="6" parent="3" name="createdAt">
+      <Position>2</Position>
+      <DataType>Date(0)|91s</DataType>
+    </column>
+    <column id="7" parent="3" name="email">
+      <Position>3</Position>
+      <DataType>String(0)|12s</DataType>
+    </column>
+    <column id="8" parent="3" name="name">
+      <Position>4</Position>
+      <DataType>String(0)|12s</DataType>
+    </column>
+    <column id="9" parent="3" name="password">
+      <Position>5</Position>
+      <DataType>String(0)|12s</DataType>
+    </column>
+    <column id="10" parent="3" name="updatedAt">
+      <Position>6</Position>
+      <DataType>Date(0)|91s</DataType>
+    </column>
+  </database-model>
+</dataSource>
